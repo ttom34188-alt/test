@@ -20,3 +20,11 @@ def modulo(a, b):
     if b == 0:
         raise ValueError("Cannot modulo by zero")
     return a % b
+
+def logarithm(a, base=10):
+    if a <= 0:
+        raise ValueError("Cannot calculate logarithm of non-positive number")
+    if base <= 0 or base == 1:
+        raise ValueError("Base must be positive and not equal to 1")
+    import math
+    return math.log(a, base)
