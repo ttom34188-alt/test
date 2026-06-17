@@ -92,3 +92,24 @@ def count_words(s):
 def is_palindrome(s):
     s = s.lower().replace(' ', '')
     return s == s[::-1]
+
+def sum_list(numbers):
+    if not numbers:
+        raise ValueError("Cannot sum empty list")
+    return sum(numbers)
+
+def max_list(numbers):
+    if not numbers:
+        raise ValueError("Cannot find max of empty list")
+    return max(numbers)
+
+def min_list(numbers):
+    if not numbers:
+        raise ValueError("Cannot find min of empty list")
+    return min(numbers)
+
+def sort_list(numbers, reverse=False):
+    return sorted(numbers, reverse=reverse)
+
+def filter_list(numbers, condition_func):
+    return [num for num in numbers if condition_func(num)]
