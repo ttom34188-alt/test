@@ -76,3 +76,19 @@ def kilometers_to_miles(kilometers):
 
 def miles_to_kilometers(miles):
     return miles * 1.60934
+
+def reverse_string(s):
+    return s[::-1]
+
+def capitalize_words(s):
+    return ' '.join(word.capitalize() for word in s.split())
+
+def count_characters(s):
+    return len(s)
+
+def count_words(s):
+    return len(s.split())
+
+def is_palindrome(s):
+    s = s.lower().replace(' ', '')
+    return s == s[::-1]
