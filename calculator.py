@@ -16,5 +16,7 @@ def divide(a, b):
 def power(a, b):
     return a ** b
 
-def absolute(a):
-    return abs(a)
+def modulo(a, b):
+    if b == 0:
+        raise ValueError("Cannot modulo by zero")
+    return a % b
