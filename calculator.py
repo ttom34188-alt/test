@@ -40,3 +40,27 @@ def cos(a):
 def tan(a):
     import math
     return math.tan(a)
+
+def mean(numbers):
+    if not numbers:
+        raise ValueError("Cannot calculate mean of empty list")
+    return sum(numbers) / len(numbers)
+
+def median(numbers):
+    if not numbers:
+        raise ValueError("Cannot calculate median of empty list")
+    sorted_numbers = sorted(numbers)
+    n = len(sorted_numbers)
+    if n % 2 == 1:
+        return sorted_numbers[n//2]
+    else:
+        return (sorted_numbers[n//2 - 1] + sorted_numbers[n//2]) / 2
+
+def mode(numbers):
+    if not numbers:
+        raise ValueError("Cannot calculate mode of empty list")
+    from collections import Counter
+    counts = Counter(numbers)
+    max_count = max(counts.values())
+    modes = [num for num, count in counts.items() if count == max_count]
+    return modes[0] if len(modes) == 1 else modes
