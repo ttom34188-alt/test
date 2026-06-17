@@ -64,3 +64,15 @@ def mode(numbers):
     max_count = max(counts.values())
     modes = [num for num, count in counts.items() if count == max_count]
     return modes[0] if len(modes) == 1 else modes
+
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def fahrenheit_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5/9
+
+def kilometers_to_miles(kilometers):
+    return kilometers * 0.621371
+
+def miles_to_kilometers(miles):
+    return miles * 1.60934
