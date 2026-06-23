@@ -1,3 +1,4 @@
+# Small test change for branch demonstration
 def add(a, b):
     # Testing polling trigger - new modification at 13:21
     return a + b
