@@ -92,3 +92,5 @@ def count_words(s):
 def is_palindrome(s):
     s = s.lower().replace(' ', '')
     return s == s[::-1]
+
+# Second test change for another branch
