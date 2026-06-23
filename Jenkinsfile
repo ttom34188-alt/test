@@ -1,5 +1,11 @@
 pipeline {
     agent any
+
+    triggers {
+        githubPush()
+        // 每5分钟检查一次PR变化
+        pollSCM('H/5 * * * *')
+    }
     
     environment {
         PYTHONPATH = "${WORKSPACE}"
